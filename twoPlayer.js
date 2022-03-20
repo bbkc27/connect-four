@@ -3,7 +3,7 @@
 
 let score = 0;
 let turns = 0;
-let currentPlayer;
+let currentPlayer= "Player One";
 
 
 
@@ -34,15 +34,62 @@ closeHowToPlayButton.addEventListener("click", closeHowToPlay);
 
 // Grabbing Current Player element
 let currentPlayerText = document.getElementById("currentPlayer");
+let currentPlayerToken = document.querySelector(".currentPlayerToken");
 
-//Setting Current Player
-if (turns == 0 || turns % 2 == 0){
-    currentPlayer = "Player One"
-    currentPlayerText.innerText = currentPlayer;
+currentPlayerToken.style.backgroundColor = "red";
+
+
+if (turns % 2 == 0){
+    currentPlayer = "Player One"; 
 } else if (turns % 2 !==0){
-    currentPlayer = "Player Two"
-    currentPlayerText == currentPlayer;
+    currentPlayer = "Player Two";    
 }
 
+currentPlayerText.innerHTML = currentPlayer;
+
+
+
+
 //New Turn Functionality
-let 
+let boxes = document.querySelectorAll(".box");
+
+//Functions making Boxes Droppable
+const allowDrop = (ev) => {
+    ev.preventDefault();
+}
+
+//Dropping new token
+const drop = (ev) => {
+
+    ev.preventDefault();
+
+    turns += 1
+
+    let token = document.createElement('div')
+    
+        if (currentPlayer = 'Player One'){
+            token.style.backgroundColor = "red";
+            token.classList.add("droppedToken")
+        } else if (currentPlayer = 'Player Two'){
+            token.style.backgroundColor = 'green';
+            token.classList.add("droppedToken")
+        }
+
+    console.log(token)
+
+    //Setting Current Player
+    if (turns == 0 || turns % 2 == 0){
+    currentPlayer = "Player One"
+    currentPlayerText.innerText = currentPlayer;
+    currentPlayerToken.style.backgroundColor = "red";
+    } else if (turns % 2 !==0){
+    currentPlayer = "Player Two"
+    currentPlayerText == currentPlayer;
+    currentPlayerToken.style.backgroundColor = "green";
+    }
+
+    console.log(turns, currentPlayer, currentPlayerText.innerHTML)
+    return turns;
+}
+
+
