@@ -24,11 +24,12 @@
                 </div>
             </div>
             
-            <h5>Current Player: <span id="currentPlayer"> </span></h5>
+            <h5>Current Player: </h5><h5 id="currentPlayer"> </h5>
         </div>
 
         <div class="middleHeader">
             <h1>CoNnEcT fOuR</h1>
+            <button class="resetGame">Reset Game</button>
         </div>
 
         <div class="rightHeader">
@@ -43,54 +44,69 @@
         <div class="currentPlayerToken"></div>
 
         <div id="gameBoard">
-            <div class ="box rowOne columnOne" onclick="drop(event)"></div>
-            <div class ="box rowOne columnTwo" onclick="drop(event)"></div>
-            <div class ="box rowOne columnThree" onclick="drop(event)"></div>
-            <div class ="box rowOne columnFour" onclick="drop(event)"></div>
-            <div class ="box rowOne columnFive" onclick="drop(event)"></div>
-            <div class ="box rowOne columnSix" onclick="drop(event)"></div>
-            <div class ="box rowOne columnSeven" onclick="drop(event)"></div>
 
-            <div class ="box rowTwo columnOne" onclick="drop(event)"></div>
-            <div class ="box rowTwo columnTwo" onclick="drop(event)"></div>
-            <div class ="box rowTwo columnThree" onclick="drop(event)"></div>
-            <div class ="box rowTwo columnFour" onclick="drop(event)"></div>
-            <div class ="box rowTwo columnFive" onclick="drop(event)"></div>
-            <div class ="box rowTwo columnSix" onclick="drop(event)"></div>
-            <div class ="box rowTwo columnSeven" onclick="drop(event)"></div>
+            <div class="column columnOne">
+                <div class ="box rowOne" onclick="drop(event)"></div>
+                <div class ="box rowTwo" onclick="drop(event)"></div>
+                <div class ="box rowThree" onclick="drop(event)"></div>
+                <div class ="box rowFour" onclick="drop(event)"></div>
+                <div class ="box rowFive" onclick="drop(event)"></div>
+                <div class ="box rowSix" onclick="drop(event)"></div>
+            </div>
 
-            <div class ="box rowThree columnOne" onclick="drop(event)"></div>
-            <div class ="box rowThree columnTwo" onclick="drop(event)"></div>
-            <div class ="box rowThree columnThree" onclick="drop(event)"></div>
-            <div class ="box rowThree columnFour" onclick="drop(event)"></div>
-            <div class ="box rowThree columnFive" onclick="drop(event)"></div>
-            <div class ="box rowThree columnSix" onclick="drop(event)"></div>
-            <div class ="box rowThree columnSeven" onclick="drop(event)"></div>
+            <div class ="column columnTwo">
+                <div class ="box rowOne" onclick="drop(event)"></div>
+                <div class ="box rowTwo" onclick="drop(event)"></div>
+                <div class ="box rowThree" onclick="drop(event)"></div>
+                <div class ="box rowFour" onclick="drop(event)"></div>
+                <div class ="box rowFive" onclick="drop(event)"></div>
+                <div class ="box rowSix" onclick="drop(event)"></div>
+            </div>
+ 
+            <div class="column columnThree">
+                <div class ="box rowOne columnThree" onclick="drop(event)"></div>
+                <div class ="box rowTwo columnThree" onclick="drop(event)"></div>
+                <div class ="box rowThree columnThree" onclick="drop(event)"></div>
+                <div class ="box rowFour columnThree" onclick="drop(event)"></div>
+                <div class ="box rowFive columnThree" onclick="drop(event)"></div>
+                <div class ="box rowSix columnThree" onclick="drop(event)"></div>
+            </div>
 
-            <div class ="box rowFour columnOne" onclick="drop(event)"></div>
-            <div class ="box rowFour columnTwo" onclick="drop(event)"></div>
-            <div class ="box rowFour columnThree" onclick="drop(event)"></div>
-            <div class ="box rowFour columnFour" onclick="drop(event)"></div>
-            <div class ="box rowFour columnFive" onclick="drop(event)"></div>
-            <div class ="box rowFour columnSix" onclick="drop(event)"></div>
-            <div class ="box rowFour columnSeven" onclick="drop(event)"></div>
+            <div class="column columnFour">
+                <div class ="box rowOne columnFour" onclick="drop(event)"></div>
+                <div class ="box rowTwo columnFour" onclick="drop(event)"></div>
+                <div class ="box rowThree columnFour" onclick="drop(event)"></div>
+                <div class ="box rowFour columnFour" onclick="drop(event)"></div>
+                <div class ="box rowFive columnFour" onclick="drop(event)"></div>
+                <div class ="box rowSix columnFour" onclick="drop(event)"></div>
+            </div>
 
-            <div class ="box rowFive columnOne" onclick="drop(event)"></div>
-            <div class ="box rowFive columnTwo" onclick="drop(event)"></div>
-            <div class ="box rowFive columnThree" onclick="drop(event)"></div>
-            <div class ="box rowFive columnFour" onclick="drop(event)"></div>
-            <div class ="box rowFive columnFive" onclick="drop(event)"></div>
-            <div class ="box rowFive columnSix" onclick="drop(event)"></div>
-            <div class ="box rowFive columnSeven" onclick="drop(event)"></div>
+            <div class="column columnFive">
+                <div class ="box rowOne columnFive" onclick="drop(event)"></div>
+                <div class ="box rowTwo columnFive" onclick="drop(event)"></div>
+                <div class ="box rowThree columnFive" onclick="drop(event)"></div>
+                <div class ="box rowFour columnFive" onclick="drop(event)"></div>
+                <div class ="box rowFive columnFive" onclick="drop(event)"></div>
+                <div class ="box rowSix columnFive" onclick="drop(event)"></div>
+            </div>
 
-            <div class ="box rowSix columnOne" onclick="drop(event)"></div>
-            <div class ="box rowSix columnTwo" onclick="drop(event)"></div>
-            <div class ="box rowSix columnThree" onclick="drop(event)"></div>
-            <div class ="box rowSix columnFour" onclick="drop(event)"></div>
-            <div class ="box rowSix columnFive" onclick="drop(event)"></div>
-            <div class ="box rowSix columnSix" onclick="drop(event)"></div>
-            <div class ="box rowSix columnSeven" onclick="drop(event)"></div>
+            <div class="column columnSix">
+                <div class ="box rowOne columnSix" onclick="drop(event)"></div>
+                <div class ="box rowTwo columnSix" onclick="drop(event)"></div>
+                <div class ="box rowThree columnSix" onclick="drop(event)"></div>
+                <div class ="box rowFour columnSix" onclick="drop(event)"></div>
+                <div class ="box rowFive columnSix" onclick="drop(event)"></div>
+                <div class ="box rowSix columnSix" onclick="drop(event)"></div>
+            </div>
 
+            <div class="column columnSeven" onclick="drop(event)">
+                <div class ="box rowOne columnSeven"></div>
+                <div class ="box rowTwo columnSeven"></div>
+                <div class ="box rowThree columnSeven"></div>
+               <div class ="box rowFour columnSeven"></div>
+               <div class ="box rowFive columnSeven"></div>
+               <div class ="box rowSix columnSeven"></div>
+            </div>
         </div>
 
     </main>

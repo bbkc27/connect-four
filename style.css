@@ -9,15 +9,17 @@ header{
     text-align: center;
     margin: auto;
     margin-bottom: 0%;
-    padding-bottom: 0;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
     border-bottom: 2px dotted rgb(185, 5, 5);
 }
 
-.leftHeader, .rightHeader {
-    padding: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+.middleHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -106,30 +108,47 @@ main{
 
 #gameBoard {
     margin: auto;
-    padding: 4%;
     padding-top: 1%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
     max-width: 450px;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
 }
 
 .box{
     border: 1px solid black;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     width: 50px;
     height: 50px;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-.currentPlayerToken, .droppedToken {
-    width: 40px;
-    height: 40px;
+.currentPlayerToken {
+    width: 30px;
+    height: 30px;
     border: 1px solid black;
     border-radius: 50%;
     margin: auto;
     margin-top: 20px;
+    z-index: 1;
+}
+
+.droppedToken {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: auto;
     z-index: 1;
 }
 
