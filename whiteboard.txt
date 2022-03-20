@@ -1,0 +1,42 @@
+
+Include game title
+Include how to play
+Include Start New Game 
+Include Competition 
+Include Reset Competition 
+Include Win Modal
+Include Tie Modal
+Make players switch turns
+    
+    let turns = 0;
+    let currentPlayer;
+
+    if (turns == 0 || turns % 2 == 0){
+        currentPlayer = Player1
+    }
+
+Show which player's turn it is
+
+    let playerDisplay = document.querySelector(".playerDisplay")
+
+    playerDisplay.innerHTML = currentPlayer
+
+Create Game Board (7 columns x 7 rows)
+    
+    create game div in HTML w/ id ="gameBoard"
+    
+    let gameBoard = []
+    document.getElementById("gameBoard)
+
+
+
+Tie condition:
+if turns >= 49 {
+    
+    const tieModal = () => {
+
+    }
+} 
+
+STRETCH Goals
+- Let players set their own names

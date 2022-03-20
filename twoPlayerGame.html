@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <title>Connect Four</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="leftHeader">
+            <button id="howToPlayButton" class="headerButton">How to Play</button>
+            
+            <div class="howToPlayModal">
+                <div class="howToPlayTextbox">
+                    <button class="closeHowToPlay">X</button>
+                    <p>Connect Four is a two-player game in which the players take turns dropping colored tokens into a seven-column, six-row vertically suspended grid. Tokens fall straight down, occupying the lowest available slot within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens.</p>
+                </div>
+            </div>
+            
+            <h5>Current Player: <span id="currentPlayer"> </span></h5>
+        </div>
+
+        <div class="middleHeader">
+            <h1>CoNnEcT fOuR</h1>
+        </div>
+
+        <div class="rightHeader">
+         <a href="index.html">Home</a>
+         <h5>Score: <span id="score"> </span></h5>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="currentPlayerToken"></div>
+
+        <div id="gameBoard">
+            <div class ="box rowOne columnOne" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowOne columnTwo" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowOne columnThree" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowOne columnFour" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowOne columnFive" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowOne columnSix" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowOne columnSeven" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+
+            <div class ="box rowTwo columnOne" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowTwo columnTwo" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowTwo columnThree" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowTwo columnFour" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowTwo columnFive" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowTwo columnSix" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowTwo columnSeven" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+
+            <div class ="box rowThree columnOne" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowThree columnTwo" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowThree columnThree" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowThree columnFour" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowThree columnFive" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowThree columnSix" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowThree columnSeven" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+
+            <div class ="box rowFour columnOne" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFour columnTwo" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFour columnThree" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFour columnFour" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFour columnFive" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFour columnSix" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFour columnSeven" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+
+            <div class ="box rowFive columnOne" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFive columnTwo" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFive columnThree" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFive columnFour" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFive columnFive" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFive columnSix" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowFive columnSeven" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+
+            <div class ="box rowSix columnOne" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowSix columnTwo" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowSix columnThree" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowSix columnFour" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowSix columnFive" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowSix columnSix" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+            <div class ="box rowSix columnSeven" ondrop="drop(event)" onclick="allowDrop(event)"></div>
+
+        </div>
+
+    </main>
+
+<script src="twoPlayer.js"></script>
+</body>
+</html>
